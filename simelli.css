@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: "Oswald", sans-serif;
-  background-color: #f5f5dc; /* beige bakgrund */
-  color: #0d1b2a; /* mörk text */
+  background-color: #f5f5dc;
+  color: #0d1b2a;
   line-height: 1.6;
 }
 
@@ -11,14 +11,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b263b; /* mörkblå */
-  padding: 5px 40px;
+  background-color: #1b263b;
+  padding: 5px clamp(12px, 4vw, 40px);
 }
 
 .nexora-logga {
-    width: 250px;
-    height: auto;
-    margin-top: 0px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-top: 0;
 }
 
 .huvudmeny ul {
@@ -31,48 +32,49 @@ header {
 
 .huvudmeny a {
   text-decoration: none;
-  color: #f5f5dc; /* beige text */
+  color: #f5f5dc;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .huvudmeny a:hover {
-  color: #4cc9f0; /* ljusblå vid hover */
+  color: #4cc9f0;
 }
 
 .profil {
-  display: flex;              /* gör två kolumner */
-  justify-content: center;      
-  gap: 30px;                  /* avstånd mellan bild och text */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .profil img {
-  width: 400px;               /* bestäm bildstorlek */
-  border-radius: 10px;        /* rundade hörn (valfritt) */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
   box-shadow: 0 4px 8px black;
 }
 
 .profil .info {
-  max-width: 600px;           /* gör så texten inte blir för bred */
+  max-width: 600px;
 }
 
 .sned {
-    font-style: italic;
-    color: #1b263b;
-    font-family: "Oswald", sans-serif;
-    font-size: 100px;
-    font-weight: 1000;
-
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s ease;
+  font-style: italic;
+  color: #1b263b;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2rem, 10vw, 6rem);
+  font-weight: 1000;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease;
 }
 
 .sned.visa {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 /* Sociala medier under bilden */
 .sociala-medier {
@@ -91,12 +93,10 @@ header {
 .ikoner {
   display: flex;
   justify-content: center;
-  gap: 15px; /* mellanrum mellan ikonerna */
+  gap: 15px;
 }
 
-.ikoner a {
-  display: inline-block;
-}
+.ikoner a { display: inline-block; }
 
 .ikoner img.ikon {
   display: block;
@@ -106,41 +106,40 @@ header {
 }
 
 h2 {
-    color: #1b263b;
-    font-family: "Oswald", sans-serif;
-    margin-top: 40px;
+  color: #1b263b;
+  font-family: "Oswald", sans-serif;
+  margin-top: 40px;
 }
 
 h4 {
-    color: #1b263b;
-    font-family:"Oswald", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
+  color: #1b263b;
+  font-family:"Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
 
-.skill {
-  margin: 15px 0;
-}
+.skill { margin: 15px 0; }
 
 .bar {
   background: #dddada;
   border-radius: 20px;
   overflow: hidden;
   height: 25px;
-  width: 700px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
 }
 
 .fill {
   height: 100%;
-  width: 0; /* startar tom */
+  width: 0;
   line-height: 25px;
-  color: rgb(0, 0, 0);
+  color: #000;
   text-align: right;
   padding-right: 10px;
   border-radius: 20px;
-  transition: width 2s; /* animation */
+  transition: width 2s;
   box-shadow: 0 7px 10px rgba(0,0,0,1);
+  background: #4cc9f0;
 }
 
 .slideshow {
@@ -151,7 +150,8 @@ h4 {
 }
 
 .slideshow img {
-  max-width: 400px;
+  max-width: 100%;
+  height: auto;
   max-height: 300px;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
@@ -160,7 +160,7 @@ h4 {
 #mina-projekt {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px; /* mellanrum mellan rutorna */
+  gap: 20px;
 }
 
 .projektkort {
@@ -169,10 +169,6 @@ h4 {
   border-radius: 8px;
   background: #3670b4;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.fill {
-  background: #4cc9f0;
 }
 
 /* ====== Footer ====== */
@@ -184,31 +180,14 @@ footer {
   text-align: center;
 }
 
-.footer h3 {
-  margin-top: 0;
-  color: #4cc9f0;
-}
+.footer h3 { margin-top: 0; color: #4cc9f0; }
+.footer a { color: #4cc9f0; text-decoration: none; }
+.footer a:hover { color: #4cc9f0; text-decoration: underline; }
 
-.footer a {
-  color: #4cc9f0;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #4cc9f0;
-  text-decoration: underline;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-h4{
-  color: white;
-}
+h4 { color: white; }
 
 .navicon {
-  display: none; 
+  display: none;
   font-size: 24px;
   background: none;
   color: #f5f5dc;
@@ -216,10 +195,9 @@ h4{
   cursor: pointer;
 }
 
+/* Mobil */
 @media (max-width: 768px) {
-  .navicon {
-    display: block; 
-  }
+  .navicon { display: block; }
 
   .huvudmeny ul {
     display: none;
@@ -232,7 +210,7 @@ h4{
     border-radius: 8px;
   }
 
-  .huvudmeny ul.visa {
-    display: flex;
-  }
+  .huvudmeny ul.visa { display: flex; }
+
+  .profil { flex-direction: column; align-items: center; }
 }

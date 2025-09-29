@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 300);
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const navicon = document.querySelector('.navicon');
   const meny = document.querySelector('.huvudmeny ul');
