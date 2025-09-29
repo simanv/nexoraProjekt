@@ -1,0 +1,145 @@
+/* ====== Grundstil ====== */
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  background-color: #f5f5dc; /* beige bakgrund */
+  color: #0d1b2a; /* mörk text */
+  line-height: 1.6;
+}
+
+/* ====== Header & Meny ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b263b; /* mörkblå */
+  padding: 5px 40px;
+}
+
+.nexora-logga {
+    width: 250px;
+    height: auto;
+    margin-top: 0px;
+}
+
+.huvudmeny ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.huvudmeny a {
+  text-decoration: none;
+  color: #f5f5dc; /* beige text */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.huvudmeny a:hover {
+  color: #4cc9f0; /* ljusblå vid hover */
+}
+
+h1{
+    margin-left: 40px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;;
+}
+
+
+/* Poträttbild-namn */
+.namn-titel a {
+    text-decoration: none;
+    color: #1b263b;
+    transition: transform 0.2 ease, font-size 0.2s ease;
+    display: inline-block;
+}
+
+.namn-titel a:hover {
+    transform: scale(1.2);
+    color: #4cc9f0;
+}
+
+.info {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6;
+}
+
+
+/* Porträttbild */
+.porträttsektion {
+  display: flex;
+  justify-content: center;  /* centrerar hela raden */
+  gap: 40px; /*avstånd mellan personerna*/
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.person {
+    text-align: center; /*gör att namn hamnar under bilden*/
+    width: 220px;
+}
+
+.person img {
+    width: 200px; /*storlek på bild*/
+    height: auto;
+    border: 4px solid #1b263b;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* ====== Bildspel ====== */
+.bildspel {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.bildspel img {
+  width: 220px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #4cc9f0;
+}
+
+
+/* ====== Footer ====== */
+footer {
+  background: #1b263b;
+  color: #f5f5dc;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer h3 {
+  margin-top: 0;
+  color: #4cc9f0;
+}
+
+.footer a {
+  color: #4cc9f0;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #4cc9f0;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+h4{
+  color: white;
+}
+
