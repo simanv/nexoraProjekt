@@ -47,9 +47,13 @@ h1{
 
 p {
     font-size: 18px;
-    line-height: 1.6;;
+    line-height: 1.6;
 }
 
+li {
+    margin-left: 50px;
+    font-size: 18px;
+}
 
 /* Poträttbild-namn */
 .namn-titel a {

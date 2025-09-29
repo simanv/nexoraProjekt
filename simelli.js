@@ -44,6 +44,7 @@ window.onload = () =>
     }
   });
   
+ // 
 (async () => {
   const NAME = 'Simelli Ani'; 
   const prioRank = { 'Låg': 1, 'Medium': 2, 'Hög': 3 };
@@ -64,6 +65,7 @@ window.onload = () =>
     return;
   }
 
+  
   function render(items) {
     if (!items.length) { listEl.innerHTML = '<p>Inga projekt.</p>'; return; }
     listEl.innerHTML = items.map(p => `
