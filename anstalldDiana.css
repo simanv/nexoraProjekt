@@ -58,7 +58,7 @@ header {
 .porträttbild img {
   width: 280px;
   height: auto;
-  border: 4px solid #1b263b;
+  border: 5px solid #1b263b;
   object-fit: cover;
   display: block;
 }
