@@ -140,19 +140,13 @@ function visaProjekt(projektLista) {
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  const navicon = document.querySelector('.navicon');
+  const meny = document.querySelector('.huvudmeny ul');
 
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      
-      if (window.innerWidth < 768) {
-        e.preventDefault();
-        const parent = toggle.parentElement;
-        parent.classList.toggle('active');
-      }
+  if (navicon && meny) {
+    navicon.addEventListener('click', () => {
+      meny.classList.toggle('visa');
     });
-  });
+  }
 });
-

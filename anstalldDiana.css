@@ -297,42 +297,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Dropdown meny */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none; 
-  position: absolute;
-  background-color: #1b263b;
-  padding: 10px 0;
-  list-style: none;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  min-width: 180px;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 8px 15px;
-  color: #f5f5dc;
-  text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-  background-color: #4cc9f0;
-  color: #0d1b2a;
-}
-
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
 .navicon {
   display: none; 
   font-size: 24px;
