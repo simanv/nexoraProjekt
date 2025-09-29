@@ -65,7 +65,7 @@ window.onload = () =>
     return;
   }
 
-  
+
   function render(items) {
     if (!items.length) { listEl.innerHTML = '<p>Inga projekt.</p>'; return; }
     listEl.innerHTML = items.map(p => `
@@ -105,9 +105,12 @@ window.onload = () =>
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-  const rubrik = document.querySelector(".sned");
-  setTimeout(() => {
-    rubrik.classList.add("visa");
-  }, 300);
-});
+  const navicon = document.querySelector('.navicon');
+  const meny = document.querySelector('.huvudmeny ul');
 
+  if (navicon && meny) {
+    navicon.addEventListener('click', () => {
+      meny.classList.toggle('visa');
+    });
+  }
+});

@@ -45,7 +45,7 @@ header {
   --bg:#1b263b;     /* mörk bakgrund */
   --kort: #0d1b2a;       /* kortbakgrund */
   --ram: #0d1b2a; 
-  --text:#e5e7eb;
+  --text:#7e7e7e;
   --svag:#94a3b8;
   --ok:#22c55e;
   --fel:#ef4444;
@@ -183,4 +183,35 @@ footer {
 
 h4{
   color: white;
+}
+
+
+.navicon {
+  display: none; 
+  font-size: 24px;
+  background: none;
+  color: #f5f5dc;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navicon {
+    display: block; 
+  }
+
+  .huvudmeny ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1b263b;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .huvudmeny ul.visa {
+    display: flex;
+  }
 }
