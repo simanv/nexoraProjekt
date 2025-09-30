@@ -1,9 +1,8 @@
-body {
-  margin: 0;
-  font-family: "Oswald", sans-serif;
-  background-color: #f5f5dc; /* beige bakgrund */
-  color: #0d1b2a; /* mörk text */
-  line-height: 1.6;
+body{
+  margin:0;
+  background: #1b263b;
+  color:var(--text);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* ====== Header & Meny ====== */
@@ -53,12 +52,8 @@ header {
 }
 
 *{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  background: #1b263b;
-  color:var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+html,body { 
+  height:100%; 
 }
 
 .kontakt-wrap{
@@ -77,9 +72,7 @@ h1{
 }
 
 form{ display:grid; gap:16px; }
-
 .fält{ display:grid; gap:6px; }
-
 label{ font-weight:600; }
 
 input, textarea{
@@ -94,18 +87,19 @@ input, textarea{
   transition: border-color .15s, box-shadow .15s;
 }
 
+:root{
+  --ok-mix:  #2fb463;  /* approx mix av --ok och #1f2937 */
+  --fel-mix: #d75454;  /* approx mix av --fel och #1f2937 */
+  --fokus-ring: rgba(96,165,250,.30);
+}
+
 input:focus, textarea:focus{
-  border-color:var(--fokus);
-  box-shadow:0 0 0 3px color-mix(in oklab, var(--fokus) 30%, transparent);
+  border-color: var(--fokus);
+  box-shadow: 0 0 0 3px var(--fokus-ring);
 }
+input.validerad-ok, textarea.validerad-ok{ border-color: var(--ok-mix); }
+input.validerad-fel, textarea.validerad-fel{ border-color: var(--fel-mix); }
 
-input.validerad-ok, textarea.validerad-ok{
-  border-color: color-mix(in oklab, var(--ok) 70%, #1f2937);
-}
-
-input.validerad-fel, textarea.validerad-fel{
-  border-color: color-mix(in oklab, var(--fel) 70%, #1f2937);
-}
 
 .hint{
   margin:2px 0 0;
