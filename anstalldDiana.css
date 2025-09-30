@@ -89,19 +89,14 @@ header {
   gap: 15px; 
 }
 
-.ikoner a {
-  display: inline-block;
-}
-
 .ikoner img.ikon {
   width: 40px;
   height: auto;
-  transition: transform 0.3s, filter 0.3s;
+  transition: transform 0.3s;
 }
 
 .ikoner img.ikon:hover {
   transform: scale(1.1);
-  filter: brightness(1.2);
 }
 
 .om-mig {
