@@ -1,0 +1,265 @@
+body{
+  margin:0;
+  font-family: "Oswald", sans-serif;
+  background:#f5f5dc; /* backgrund*/
+  color:#0d1b2a;
+  line-height: 1.6;
+}
+
+/* ====== Header & Meny ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b263b; 
+  padding: 5px 40px;
+}
+
+.nexora-logga {
+    width: 250px;
+    height: auto;
+    margin-top: 0px;
+}
+
+.huvudmeny ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.huvudmeny a {
+  text-decoration: none;
+  color: #f5f5dc; /* beige text */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.huvudmeny a:hover {
+  color: #4cc9f0; /* ljusblå vid hover */
+}
+
+/* profil (originalet du bad om) */
+.profil {
+  display: flex;
+  justify-content: center;
+  /*align-items: flex-start;  /* viktigt: ingen vertikal stretch */
+  gap: 30px;
+}
+
+.profil img {
+  /*display: block;*/
+  width: 400px;            /* ändra storlek här vid behov */
+  /*height: auto !important; /* tvingar rätt proportion */
+  /*flex: 0 0 auto;          förhindrar flex-stretch */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px black;
+}
+
+.profil .info {
+  max-width: 600px;           /* gör så texten inte blir för bred */
+}
+
+.sned {
+  font-style: italic;
+  color: #1b263b;
+  font-family: "Oswald", sans-serif;
+  font-size: 100px;
+  font-weight: 1000;
+  margin-top: 10px;
+
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+.sned.visa {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Sociala medier under bilden */
+.sociala-medier {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.folj-text {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #0d1b2a;
+}
+
+.ikoner {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* mellanrum mellan ikonerna */
+}
+
+.ikoner a {
+  display: inline-block;
+}
+
+.ikoner img.ikon {
+  display: block;
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+/*kompetensstaplar*/
+h2 {
+  color: rgb(17,21,74);
+  font-family: "Oswald", sans-serif;
+  margin-top:40px;
+  text-align: center;
+}
+
+h4 {
+  color: rgb(17,21,74);
+  font-family:"Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.bar {
+  background: #dddada;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  width: 700px;
+  max-width: 100%;
+}
+
+.fill {
+  height: 100%;
+  width: 0; /* startar tom */
+  line-height: 25px;
+  color: rgb(0, 0, 0);
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: width 2s; /* animation */
+  box-shadow: 0 7px 10px rgba(0,0,0,1);
+}
+
+.slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slideshow img {
+  max-width: 400px;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* ===== Projektsektion ===== */
+.projects{
+  background: rgb(17,21,74);        /* din mörkblå*/
+  margin-top: 40px;
+  padding: 24px 0 36px;
+  border-radius: 20px;
+}
+.projects-wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.projects-title{
+  color: rgb(234,201,155);          /* beige rubrik*/
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 6px 0 20px;
+}
+
+.fill {
+  background: #4cc9f0;
+}
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.project-card{
+  background: #3f5f96;              /* blå ton för kortet */
+  color: rgb(243,240,235);           /* ljus text */
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  box-shadow: inset 0 6px 18px rgba(0,0,0,.12);
+}
+
+.project-card h3{
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(18px, 2.4vw, 24px);
+  margin: 0 0 6px;
+  color: rgb(243,240,235);
+}
+
+.project-lead{
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: rgb(243,240,235);
+}
+
+.project-card ul{
+  list-style: disc;
+  padding-left: 20px;
+  margin: 8px 0 0;
+}
+.project-card li{
+  margin: 4px 0;
+  font-size: 16px;
+}
+.project-card strong{
+  color: rgb(234,201,155);          /* beige etiketter: Status, Prioritet… */
+  font-weight: 700;
+}
+
+/* finjustera mobil */
+@media (max-width: 700px){
+  .projects{ border-radius: 12px; padding: 18px 0 28px; }
+  .project-card{ padding: 16px; }
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #0d1b2a;
+  color: #f5f5dc;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer h3 {
+  margin-top: 0;
+  color: #4cc9f0;
+}
+
+.footer a {
+  color: #4cc9f0;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #4cc9f0;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  
+}
+
+.footer h4 { color: white; }

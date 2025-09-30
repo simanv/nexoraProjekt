@@ -1,0 +1,63 @@
+[
+  {
+    "id": "P-101",
+    "titel": "Kundportal – onboardingflöde",
+    "roll": "Produktutvecklare",
+    "ansvarig": "Amanda Majvind",
+    "beskrivning": "Onboardingflöden från idé till test: kontrakt, interaktionsdesign och klickbara prototyper.",
+    "startDatum": "2024-09-10",
+    "slutDatum": "2025-01-15",
+    "status": "Avslutad",
+    "prioritet": "Hög",
+    "taggar": ["onboarding", "auth", "ui"]
+
+  },
+  {
+    "id": "P-102",
+    "titel": "Rapportmotor v2",
+    "roll": "Produktutveklare",
+    "ansvarig": "Amanda Majvind",
+    "beskrivning": "Modulär rapportmotor i prototyp: JSON-templating, datamappning och snabb användarvalidering.",
+    "startDatum": "2025-09-05",
+    "slutDatum": "2025-10-30",
+    "status": "Planerad",
+    "prioritet": "Låg",
+    "taggar": ["reports", "templates"]
+  },
+  {
+    "id": "P-103",
+    "titel": "Notistjänst (event bus)",
+    "roll": "Produktutveklare",
+    "ansvarig": "Amanda Majvind",
+    "beskrivning": "Eventbus-notiser: tydliga API-kontrakt, retry-policy och robust leveransspårning.",
+    "startDatum": "2025-09-20",
+    "slutDatum": "2025-11-01",
+    "status": "Pågår",
+    "prioritet": "Hög",
+    "taggar": ["events", "retry", "queue"]
+  },
+  {
+    "id": "P-104",
+    "titel": "Admin-UI åt support",
+    "roll": "Produktutveklare",
+    "ansvarig": "Amanda Majvind",
+    "beskrivning": "Adminverktyg för support: IA, wireframes och prototyper som förenklar arbetsflöden.",
+    "startDatum": "2025-09-12",
+    "slutDatum": "2025-10-25",
+    "status": "Pågår",
+    "prioritet": "Låg",
+    "taggar": ["admin", "ia", "rbac"]
+  },
+  {
+    "id": "P-105",
+    "titel": " Designsystem & komponentbibliotek",
+    "roll": "Produktutveklare",
+    "ansvarig": "Amanda Majvind",
+    "beskrivning": "Skalbart UI-system: design tokens, återanvändbara komponenter och QA-riktlinjer.",
+    "startDatum": "2023-09-08",
+    "slutDatum": "2024-10-05",
+    "status": "Avslutad",
+    "prioritet": "Hög",
+    "taggar": ["openapi", "schema", "catalog"]
+  }
+]

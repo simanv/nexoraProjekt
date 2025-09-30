@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora - Amanda</title>
+  <link rel="stylesheet" href="./amanda.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  </head>
+<body>
+
+  <header class="header">
+  <img src="Bilder/Logga.png" alt="Nexoras logga" class="nexora-logga">
+      <nav class="huvudmeny">
+      <ul>
+      <li><a href="huvudsida.html">Hem</a></li>
+      <li><a href="om-oss.html">Om oss</a></li>
+      <li><a href="kontaktformular.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <p class="sned">AMANDA MAJVIND</p>
+  
+
+  <div class="profil">
+    <img src="Bilder/AmandaBild-1.PNG" alt="Bild på Amanda">
+    <div class="info">
+      <p>Jag arbetar som produktutvecklare och har ett starkt intresse för att förena kreativitet med teknik.</p>
+      <p>För mig handlar utveckling inte bara om att skapa en produkt, utan om att förstå behov, analysera problem och hitta lösningar som verkligen gör skillnad i människors vardag.</p>
+      <p>Min styrka ligger i att kombinera nytänkande idéer med strukturerade arbetsmetoder. Jag trivs bäst i processer där jag får följa hela resan från den första idén och skissen, till testning, förbättringar och slutligen en färdig produkt.</p>
+      <p>Under den resan är jag noggrann med detaljer, men har samtidigt alltid helheten i fokus. Som person är jag engagerad, nyfiken och tycker om att lära mig nya saker.</p>
+      <p>Jag ser utmaningar som möjligheter och är inte rädd för att tänka utanför ramarna när det behövs. För mig är det viktigt att arbeta nära andra.</p>
+      <p>Jag tror på att bra produkter utvecklas genom samarbete och genom att våga ta del av olika perspektiv.</p>
+      <p>Mitt mål är att skapa lösningar som är användarvänliga, hållbara och långsiktiga.</p>
+      <p>Oavsett om det handlar om att förbättra en befintlig process eller att bygga något helt från grunden vill jag bidra till något som har verkligt värde för både människor och samhälle.</p>
+    </div>
+  </div>
+
+   
+<div class="sociala-medier">
+    <span class="folj-text">Följ mig</span>
+    <div class="ikoner">
+        <a href="https://www.linkedin.com/in/amanda-majvind-a70558364/?originalSubdomain=se" target="_blank">
+        <img src="Bilder/linkedIn-1.jpg" alt="LinkedIn" class="ikon">
+      </a>
+      <a href="https://github.com/AmandaMajvind" target="_blank">
+        <img src="Bilder/github.png" alt="GitHub" class="ikon">
+     </a>
+    </div>
+  </div>
+
+
+
+<section id="bildspel">
+  <h2>Mina bilder</h2>
+  <div class="slideshow">
+    <button id="prev">⟨</button>
+    <img id="slideshow-image" src="./Bilder/AmandaBild1.png" alt="bildspel">
+    <button id="next">⟩</button>
+  </div>
+</section>
+
+
+  <h2>KOMPETENSER:</h2>
+
+  <div class="skill">
+    <h4>UX & UI Design</h4>
+    <div class="bar"><div class="fill UX&UIDesign">90%</div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Protoframtagning</h4>
+    <div class="bar"><div class="fill protoframtagning">85%</div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Problemlösning</h4>
+    <div class="bar"><div class="fill problemlösning">90%</div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Projektledning</h4>
+    <div class="bar"><div class="fill projektledning">95%</div></div>
+  </div>
+
+  <section> 
+   <h6> Status: </h6>
+    <select id="filter-status">
+      <option value="Alla">Alla</option>
+      <option value="Pågår">Pågår</option>
+      <option value="Avslutad">Avslutad</option>
+      <option value="Planerad">Planerad</option>
+    </select>
+</section>
+
+  <label>Sortera:
+    <select id="sort-prio">
+      <option value="none">Ingen</option>
+      <option value="prio-asc">Prioritet: låg → hög</option>
+    </select>
+</label>
+
+<section class="projects" id="projekt">
+  <div class="projects-wrap">
+    <h2 class="projects-title">Mina projekt</h2>
+    <div class="projects-grid" id="mina-projekt"></div>
+  </div>
+</section>
+
+
+  
+<footer>
+  <div class="footer">
+    <div class="namn">
+      <h3>Nexora</h3>
+    </div>
+ <div class="footer-kontakt">
+  <h4>Kontakt</h4>
+  <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
+  <p>Telefon: +46 70 123 45 67</p>
+</div>
+<div class="footer-botten">
+  <p>© 2025 Nexora Alla rättigheter förbehållna.</p>
+</div>
+</div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./amanda-script.js" defer></script>
+</body>
+</html>
