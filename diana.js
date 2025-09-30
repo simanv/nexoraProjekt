@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
  
+//Bildspel
 
   const bilder = document.querySelectorAll('.bildspel .bild');
   const prevBtn = document.querySelector('.prev');
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   visaBild(aktuellIndex);
 
+//Skill-bar
 
   const skills = document.querySelectorAll('.skill');
 
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let allaProjekt = [];
 
+//Inläsning av projekt
 
 fetch('dianaProjekt.json')
   .then(response => {
@@ -86,6 +89,8 @@ function fyllFilterAlternativ(data) {
   document.getElementById('sortering').addEventListener('change', uppdateraProjekt);
 }
 
+// Bygger filtermenyer från data och kopplar ändringshändelser (inkl. sortering) som uppdaterar projektlistan.`
+
 function uppdateraProjekt() {
   const kategoriVal = document.getElementById('kategoriFilter').value;
   const statusVal = document.getElementById('statusFilter').value;
@@ -109,6 +114,8 @@ function uppdateraProjekt() {
 
   visaProjekt(filtrerade);
 }
+
+//ritar om projektlistan i DOM med just de projekt som återstår efter filter/sortering.
 
 function visaProjekt(projektLista) {
   const container = document.getElementById('projekt-lista');
@@ -139,6 +146,8 @@ function visaProjekt(projektLista) {
     container.appendChild(item);
   });
 }
+
+// Öppnar/stänger mobilmenyn när hamburgaren klickas (togglar klassen "visa").
 
 document.addEventListener("DOMContentLoaded", () => {
   const navicon = document.querySelector('.navicon');
