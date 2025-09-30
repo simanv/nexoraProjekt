@@ -6,6 +6,12 @@ body {
   line-height: 1.6;
 }
 
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #1b263b;
+}
+
 header {
   display: flex;
   justify-content: flex-start; 
@@ -14,11 +20,15 @@ header {
   padding: 5px 40px;
 }
 
+.nexora-logga {
+  width: 250px;
+  height: auto;
+}
+
 .huvudmeny {
   margin-left: auto; 
   margin-right: 80px; 
 }
-
 
 .huvudmeny a {
   text-decoration: none;
@@ -31,13 +41,14 @@ header {
   color: #4cc9f0 !important;  
 }
 
-
-.nexora-logga {
-    width: 250px;
-    height: auto;
-    margin-top: 0px;
+.navicon {
+  display: none; 
+  font-size: 24px;
+  background: none;
+  color: #f5f5dc;
+  border: none;
+  cursor: pointer;
 }
-
 
 .namn-titel {
   text-align: center;
@@ -46,7 +57,6 @@ header {
   margin-top: 40px;
   font-weight: 700;
 }
-
 
 .porträttsektion {
   display: flex;
@@ -87,7 +97,6 @@ header {
 }
 
 .ikoner img.ikon {
-  display: block;
   width: 40px;
   height: auto;
   transition: transform 0.3s, filter 0.3s;
@@ -97,8 +106,6 @@ header {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
-
-
 
 .om-mig {
   display: flex;
@@ -110,7 +117,6 @@ header {
 
 .om-mig-rubrik {
   margin-bottom: 20px;
-  color: #1b263b;
 }
 
 .om-mig-text {
@@ -124,7 +130,6 @@ header {
   font-size: 1rem;
   text-align: left;  
 }
-
 
 .bildspel-container {
   position: relative;
@@ -151,8 +156,6 @@ header {
   display: block;
 }
 
-
-
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -171,20 +174,13 @@ header {
 .prev:hover, .next:hover {
   background-color: rgba(76, 201, 240, 0.8);
 }
+
 .prev {
   left: 10px;
 }
 
 .next {
   right: 10px;
-}
-
-
-
-h2 {
-  text-align: center;
-  margin-top: 40px;
-  color: #1b263b;
 }
 
 .skill {
@@ -207,7 +203,6 @@ h2 {
   background: #4cc9f0;
   border-radius: 20px 0 0 20px;
   transition: width 1.5s ease;
-  text-align: right;
   color: #0d1b2a;
   font-size: 0.8em;
   font-weight: bold;
@@ -237,7 +232,6 @@ h2 {
   border: 1px solid #ccc;
   font-size: 0.95em;
 }
-
 
 #projekt-lista {
   display: grid;
@@ -271,8 +265,6 @@ h2 {
   line-height: 1.5;
 }
 
-
-
 footer {
   background-color: #1b263b;  
   color: #f5f5dc;           
@@ -295,15 +287,6 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
-
-.navicon {
-  display: none; 
-  font-size: 24px;
-  background: none;
-  color: #f5f5dc;
-  border: none;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
