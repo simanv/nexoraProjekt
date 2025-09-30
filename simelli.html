@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simelli personligasida</title>
   <link rel="stylesheet" href="simelli.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,16 +15,15 @@
 
   <button class="navicon" aria-label="Meny">☰</button>
 
-  <nav class="huvudmeny">
-    <!-- VIKTIGT: inga &nbsp; eller andra tecken mellan <ul> och <li> -->
-    <ul>
-      <li><a href="huvudsida.html">Hem</a></li>
-      <li><a href="kontaktformular.html">Kontakt</a></li>
-    </ul>
-  </nav>
+<nav class="huvudmeny">
+  <ul>
+    <li><a href="huvudsida.html">Hem</a></li>
+    <li><a href="kontaktformular.html">Kontakt</a></li>
+  </ul>
+ </nav>
 </header>
 
-<p class="sned">SIMELLI ANI</p>
+<h1 class="sned">SIMELLI ANI</h1>
 
 <div class="profil">
   <img src="Bilder/SimelliBild.PNG" alt="Porträttbild på Simelli Ani, designer på Nexora">
@@ -103,10 +101,10 @@
   </div>
 </div>
 
-<!-- Sektionen hade varning: saknade rubrik. Lägg till rubrik eller byt till div. -->
+<!--Filtrera projekt-->
 <section aria-labelledby="filter-heading">
   <h2 id="filter-heading">Filtrera & sortera</h2>
-  <label for="filter-status">Filtrera:</label>
+  <label for="filter-status">Filter:</label>
   <select id="filter-status" name="filter-status">
     <option value="Alla">Alla</option>
     <option value="Pågår">Pågår</option>
@@ -114,6 +112,7 @@
     <option value="Planerad">Planerad</option>
   </select>
 
+<!--Sortera projekt-->
   <label for="sort-prio">Sortera:</label>
   <select id="sort-prio" name="sort-prio">
     <option value="none">Ingen</option>
@@ -127,6 +126,8 @@
   <div id="mina-projekt-fel" style="display:none;"></div>
 </section>
 
+
+<!--Slut info-->
 <footer>
   <div class="footer">
     <div class="namn">

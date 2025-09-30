@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #1b263b;
-  padding: 5px clamp(12px, 4vw, 40px);
+  padding: 15px;
 }
 
 .nexora-logga {
@@ -41,6 +41,7 @@ header {
   color: #4cc9f0;
 }
 
+/* Profil*/
 .profil {
   display: flex;
   justify-content: center;
@@ -60,6 +61,7 @@ header {
   max-width: 600px;
 }
 
+/* Simelli Ani */
 .sned {
   font-style: italic;
   color: #1b263b;
@@ -102,13 +104,14 @@ header {
   display: block;
   width: 40px;
   height: auto;
-  transition: transform 0.3s, filter 0.3s;
 }
 
+/* Rubriker */
 h2 {
   color: #1b263b;
   font-family: "Oswald", sans-serif;
   margin-top: 40px;
+  margin: 15px;
 }
 
 h4 {
@@ -116,10 +119,28 @@ h4 {
   font-family:"Oswald", sans-serif;
   font-weight: 300;
   font-size: 20px;
+  margin: 15px;
 }
 
-.skill { margin: 15px 0; }
+.skill { margin: 15px 10px; }
 
+/* Bildspel */
+.slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slideshow img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* Kompetenser */
 .bar {
   background: #dddada;
   border-radius: 20px;
@@ -142,21 +163,7 @@ h4 {
   background: #4cc9f0;
 }
 
-.slideshow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.slideshow img {
-  max-width: 100%;
-  height: auto;
-  max-height: 300px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
-
+/* Projekt */
 #mina-projekt {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -186,6 +193,7 @@ footer {
 
 h4 { color: white; }
 
+/* Meny - icon */
 .navicon {
   display: none;
   font-size: 24px;
