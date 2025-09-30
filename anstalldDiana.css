@@ -2,14 +2,13 @@ body {
   margin: 0;
   font-family: "Oswald", sans-serif;
   background-color: #f5f5dc; 
-  color: #0d1b2a; 
+  color: #1b263b; 
   line-height: 1.6;
 }
 
 h2 {
   text-align: center;
   margin-top: 40px;
-  color: #1b263b;
 }
 
 header {
@@ -53,7 +52,6 @@ header {
 .namn-titel {
   text-align: center;
   font-size: 3em;
-  color: #1b263b;
   margin-top: 40px;
   font-weight: 700;
 }
@@ -223,7 +221,6 @@ header {
 
 .projekt-filter label {
   font-weight: bold;
-  color: #1b263b;
 }
 
 .projekt-filter select {
