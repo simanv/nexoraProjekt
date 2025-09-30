@@ -104,6 +104,7 @@ header {
   display: block;
   width: 40px;
   height: auto;
+  cursor: pointer;
 }
 
 /* Rubriker */
@@ -111,14 +112,6 @@ h2 {
   color: #1b263b;
   font-family: "Oswald", sans-serif;
   margin-top: 40px;
-  margin: 15px;
-}
-
-h4 {
-  color: #1b263b;
-  font-family:"Oswald", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
   margin: 15px;
 }
 
@@ -171,7 +164,7 @@ h4 {
 }
 
 .projektkort {
-  border: 1px solid #969595;
+  border: 2px solid #000000;
   padding: 15px;
   border-radius: 8px;
   background: #3670b4;
