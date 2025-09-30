@@ -47,9 +47,13 @@ h1{
 
 p {
     font-size: 18px;
-    line-height: 1.6;;
+    line-height: 1.6;
 }
 
+li {
+    margin-left: 50px;
+    font-size: 18px;
+}
 
 /* Poträttbild-namn */
 .namn-titel a {
@@ -143,3 +147,32 @@ h4{
   color: white;
 }
 
+.navicon {
+  display: none; 
+  font-size: 24px;
+  background: none;
+  color: #f5f5dc;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navicon {
+    display: block; 
+  }
+
+  .huvudmeny ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1b263b;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .huvudmeny ul.visa {
+    display: flex;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana Samuel - Nexora</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="anstalldDiana.css">
+</head>
+<body>
+
+  <header class="header">
+    <img src="techföretag/nexoraLogga.png" alt="Nexoras logga" class="nexora-logga">
+
+    <button class="navicon" aria-label="Meny">☰</button>
+
+    <nav class="huvudmeny">
+      <ul>
+        <li><a href="huvudsida.html">Hem</a></li>
+        <li><a href="kontaktformular.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="namn-titel">Diana Samuel</h1>
+
+  <div class="porträttsektion">
+    <div class="porträttbild">
+      
+      <img src="Bilder/DianaBild.JPEG" alt="Porträttbild på Diana Samuel">
+    </div>
+
+    <div class="sociala-medier">
+      <span class="folj-text">Följ mig</span>
+      <div class="ikoner">
+        <a href="https://linkedin.com/in/Diana-samuel-11b4302b4" target="_blank" rel="noopener">
+          <img src="Bilder/linkedIn-1.jpg" alt="LinkedIn" class="ikon">
+        </a>
+        <a href="https://github.com/Diasah1" target="_blank" rel="noopener">
+          <img src="techföretag/github-mark.png" alt="GitHub" class="ikon">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="om-mig">
+    <h2 class="om-mig-rubrik">Om mig</h2>
+    <div class="om-mig-text">
+      <p>Jag arbetar som <b>projekt- och tjänsteansvarig på Nexora</b>, där jag leder utvecklingen och leveransen av företagets IT-tjänster. Mitt ansvar omfattar att ta fram strategier, planera projekt och samordna team för att säkerställa att våra lösningar möter både tekniska krav och kundernas affärsbehov. Fokus ligger på <b>IT-lösningar, digitalisering och användarcentrerad utveckling</b>.</p>
+
+      <p>Min utbildning inom systemvetenskap vid Örebro universitet har gett mig en stabil grund i både teknik och analys. Tillsammans med min erfarenhet inom IT-branschen har det gjort att jag kan kombinera strategiskt tänkande med ett starkt kundfokus. Jag arbetar med att identifiera behov, formulera långsiktiga mål, leda projekt, genomföra workshops och säkerställa kvalitet i alla leveranser.</p>
+
+      <p>Som projektledare fungerar jag som länken mellan teknik, design och verksamhet. Jag samarbetar nära med utvecklare, designers och kunder för att skapa <b>effektiva och hållbara IT-lösningar</b> som gör verklig skillnad. Jag brinner för innovation, struktur och användarvänlighet — och vill genom mitt arbete bidra till att Nexora fortsätter växa som en stark aktör inom IT-tjänster.</p>
+    </div>
+  </section>
+
+  <div class="bildspel-container">
+    <button class="prev" aria-label="Föregående bild">&#10094;</button>
+    <div class="bildspel">
+     
+      <img src="techföretag/bildspel1.png" alt="Bild 1" class="bild">
+      <img src="techföretag/bildspel2.jpeg" alt="Bild 2" class="bild">
+      <img src="techföretag/bildspel3.jpeg" alt="Bild 3" class="bild">
+      <img src="techföretag/bildspel4.jpeg" alt="Bild 4" class="bild">
+      <img src="techföretag/bildspel5.jpeg" alt="Bild 5" class="bild">
+    </div>
+    <button class="next" aria-label="Nästa bild">&#10095;</button>
+  </div>
+
+  <h2>Mina kompetenser</h2>
+
+  <div class="skill" data-percent="95">
+    <h4>Projektledning</h4>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="skill" data-percent="90">
+    <h4>Strategiskt tänkande</h4>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="skill" data-percent="90">
+    <h4>Kommunikation</h4>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="skill" data-percent="80">
+    <h4>Analys</h4>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="skill" data-percent="85">
+    <h4>Produktutveckling</h4>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <h2>Mina projekt</h2>
+
+  <div class="projekt-filter">
+    <label for="kategoriFilter">Kategori:</label>
+    <select id="kategoriFilter">
+      <option value="alla">Alla</option>
+    </select>
+
+    <label for="statusFilter">Status:</label>
+    <select id="statusFilter">
+      <option value="alla">Alla</option>
+    </select>
+
+    <label for="sortering">Sortera:</label>
+    <select id="sortering">
+      <option value="datum-nyast">Datum – Nyast först</option>
+      <option value="datum-aldst">Datum – Äldst först</option>
+      <option value="prioritet-hog">Prioritet – Hög först</option>
+      <option value="prioritet-lag">Prioritet – Låg först</option>
+    </select>
+  </div>
+
+  <div id="projekt-lista"></div>
+
+  <footer>
+    <div class="footer-innehall">
+      <div class="namn"><h3>Nexora</h3></div>
+      <div class="footer-kontakt">
+        <h4>Kontakt</h4>
+        <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
+        <p>Telefon: +46 70 123 45 67</p>
+      </div>
+      <div class="footer-botten">
+        <p>© 2025 Nexora – Alla rättigheter förbehållna.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="diana.js"></script>
+</body>
+</html>

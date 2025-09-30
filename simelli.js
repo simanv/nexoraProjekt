@@ -1,3 +1,11 @@
+// Sne rubrik - animation
+document.addEventListener("DOMContentLoaded", () => {
+  const rubrik = document.querySelector(".sned");
+  setTimeout(() => {
+    rubrik.classList.add("visa");
+  }, 300);
+});
+
 // ===== Bildspel =====
 const bilder = [
   './Bilder/SimelliP1.png',
@@ -30,7 +38,7 @@ nextBtn.addEventListener('click', () => {
 visaBild();
 
 
-// Progress-bar animation
+// Kompetenser - animation
 window.onload = () => 
   document.querySelectorAll('.fill').forEach(bar => {
     if (bar.classList.contains('html')) {
@@ -44,9 +52,10 @@ window.onload = () =>
     }
   });
   
+
 (async () => {
   const NAME = 'Simelli Ani'; 
-  const prioRank = { 'Låg': 1, 'Medium': 2, 'Hög': 3 };
+  const prioRank = { 'Låg': 1, 'Hög': 3 };
 
   const listEl = document.getElementById('mina-projekt');
   const statusEl = document.getElementById('filter-status');
@@ -63,6 +72,7 @@ window.onload = () =>
     listEl.innerHTML = '<p style="color:red">Kunde inte läsa in projekten.</p>';
     return;
   }
+
 
   function render(items) {
     if (!items.length) { listEl.innerHTML = '<p>Inga projekt.</p>'; return; }
@@ -102,10 +112,15 @@ window.onload = () =>
   sortEl.addEventListener('change', apply);
 })();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const rubrik = document.querySelector(".sned");
-  setTimeout(() => {
-    rubrik.classList.add("visa");
-  }, 300);
-});
 
+// Meny - icon
+document.addEventListener("DOMContentLoaded", () => {
+  const navicon = document.querySelector('.navicon');
+  const meny = document.querySelector('.huvudmeny ul');
+
+  if (navicon && meny) {
+    navicon.addEventListener('click', () => {
+      meny.classList.toggle('visa');
+    });
+  }
+});

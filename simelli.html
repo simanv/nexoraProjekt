@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simelli personligasida</title>
-    <link rel="stylesheet" href="simelli.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simelli personligasida</title>
+  <link rel="stylesheet" href="simelli.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-<body> 
-
+<body>
 
 <header class="header">
-  <img src="Bilder/Logga.png" alt="Nexoras logga" class="nexora-logga">
-      <nav class="huvudmeny">
-      <ul>
-      <li><a href="huvudsida.html">Hem</a></li>
-      <li><a href="om-oss.html">Om oss</a></li>
-      <li><a href="kontaktformular.css">Kontakt</a></li>
-    </ul>
-  </nav>
+  <img src="techföretag/nexoraLogga.png" alt="Nexoras logga" class="nexora-logga">
+
+  <button class="navicon" aria-label="Meny">☰</button>
+
+<nav class="huvudmeny">
+  <ul>
+    <li><a href="huvudsida.html">Hem</a></li>
+    <li><a href="kontaktformular.html">Kontakt</a></li>
+  </ul>
+ </nav>
 </header>
 
+<h1 class="sned">SIMELLI ANI</h1>
 
-    <p class="sned">SIMELLI ANI</p>
-  <div class="profil">
-    <img src="Bilder/SimelliBild.PNG" alt="Bild på anställd">
-    <div class="info">
-      <p>
-    Rollen som designer i vårt IT-team. Jag har ett starkt intresse för visuell design 
-    och tycker om att skapa moderna och tilltalande gränssnitt som gör det enkelt för användaren att navigera.
-    Jag arbetar gärna med färg, typografi och layout för att ge projekten en tydlig identitet och en professionell känsla. </p>
-    <p> Mina styrkor är att kombinera kreativitet med struktur, och att alltid tänka på användarens upplevelse i första hand.
-    För mig är det viktigt att hålla mig uppdaterad om trender inom design och att hitta nya sätt att presentera 
-    information på ett tydligt men inspirerande sätt.</p>
-    <p>Jag trivs allra bäst när jag får samarbeta med andra. Jag tycker om att arbeta i team, bidra med mina idéer
-    och samtidigt ta tillvara på andras perspektiv. På så sätt kan vi tillsammans bygga lösningar som inte bara är funktionella
-    utan också tilltalande och minnesvärda.</p>
-    <p>För mig är design mer än bara utseendet - det är upplevelsen av helheten. Det handlar om att skapa något som är lätt att 
-      använda, tilltalande att titta på och som lämnar ett positivt intryck hos användaren.</p>
-    </div>
+<div class="profil">
+  <img src="Bilder/SimelliBild.PNG" alt="Porträttbild på Simelli Ani, designer på Nexora">
+  <div class="info">
+    <p>
+      Rollen som designer i vårt IT-team. Jag har ett starkt intresse för visuell design 
+      och tycker om att skapa moderna och tilltalande gränssnitt som gör det enkelt för användaren att navigera.
+      Jag arbetar gärna med färg, typografi och layout för att ge projekten en tydlig identitet och en professionell känsla.
+    </p>
+    <p>
+      Mina styrkor är att kombinera kreativitet med struktur, och att alltid tänka på användarens upplevelse i första hand.
+      För mig är det viktigt att hålla mig uppdaterad om trender inom design och att hitta nya sätt att presentera 
+      information på ett tydligt men inspirerande sätt.
+    </p>
+    <p>
+      Jag trivs allra bäst när jag får samarbeta med andra. Jag tycker om att arbeta i team, bidra med mina idéer
+      och samtidigt ta tillvara på andras perspektiv. På så sätt kan vi tillsammans bygga lösningar som inte bara är funktionella
+      utan också tilltalande och minnesvärda.
+    </p>
+    <p>
+      För mig är design mer än bara utseendet – det är upplevelsen av helheten. Det handlar om att skapa något som är lätt att 
+      använda, tilltalande att titta på och som lämnar ett positivt intryck hos användaren.
+    </p>
   </div>
-  
+</div>
+
 <div class="sociala-medier">
-    <span class="folj-text">Följ mig</span>
-    <div class="ikoner">
-        <a href="https://www.linkedin.com/feed/" target="_blank">
-        <img src="Bilder/linkedIn-1.jpg" alt="LinkedIn" class="ikon">
-      </a>
-      <a href="https://github.com/simanv" target="_blank">
-        <img src="Bilder/github.png" alt="GitHub" class="ikon">
-     </a>
-    </div>
+  <span class="folj-text">Följ mig</span>
+  <div class="ikoner">
+    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">
+      <img src="Bilder/linkedIn-1.jpg" alt="LinkedIn" class="ikon">
+    </a>
+    <a href="https://github.com/simanv" target="_blank" rel="noopener">
+      <img src="Bilder/github.png" alt="GitHub" class="ikon">
+    </a>
   </div>
 </div>
 
 <section id="bildspel">
   <h2>Mina bilder</h2>
   <div class="slideshow">
-    <button id="prev">⟨</button>
-    <img id="slideshow-image" src="./Bilder/SimelliP1.png" alt="bildspel">
-    <button id="next">⟩</button>
+    <button id="prev" aria-label="Föregående bild">⟨</button>
+    <img id="slideshow-image" src="./Bilder/SimelliP1.png" alt="Bildspel">
+    <button id="next" aria-label="Nästa bild">⟩</button>
   </div>
 </section>
 
-    <h2>KOMPETENSER:</h2>
-    <div class="skill">
+<h2>KOMPETENSER:</h2>
+
+<div class="skill">
   <h5>HTML</h5>
   <div class="bar">
     <div class="fill html">90%</div>
@@ -94,50 +101,52 @@
   </div>
 </div>
 
-<section> 
-   <h6> Status: </h6>
-    <select id="filter-status">
-      <option value="Alla">Alla</option>
-      <option value="Pågår">Pågår</option>
-      <option value="Avslutad">Avslutad</option>
-      <option value="Planerad">Planerad</option>
-    </select>
+<!--Filtrera projekt-->
+<section aria-labelledby="filter-heading">
+  <h2 id="filter-heading">Filtrera & sortera</h2>
+  <label for="filter-status">Filter:</label>
+  <select id="filter-status" name="filter-status">
+    <option value="Alla">Alla</option>
+    <option value="Pågår">Pågår</option>
+    <option value="Avslutad">Avslutad</option>
+    <option value="Planerad">Planerad</option>
+  </select>
+
+<!--Sortera projekt-->
+  <label for="sort-prio">Sortera:</label>
+  <select id="sort-prio" name="sort-prio">
+    <option value="none">Ingen</option>
+    <option value="prio-asc">Prioritet: låg → hög</option>
+  </select>
 </section>
 
-  <label>Sortera:
-    <select id="sort-prio">
-      <option value="none">Ingen</option>
-      <option value="prio-asc">Prioritet: låg → hög</option>
-    </select>
-</label>
-  <section>
+<section>
   <h2>Mina projekt</h2>
   <div id="mina-projekt"></div>
   <div id="mina-projekt-fel" style="display:none;"></div>
 </section>
 
 
+<!--Slut info-->
 <footer>
   <div class="footer">
     <div class="namn">
       <h3>Nexora</h3>
     </div>
- <div class="footer-kontakt">
-  <h4>Kontakt</h4>
-  <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
-  <p>Telefon: +46 70 123 45 67</p>
-</div>
-<div class="footer-botten">
-  <p>© 2025 Nexora Alla rättigheter förbehållna.</p>
-</div>
-</div>
+    <div class="footer-kontakt">
+      <h4>Kontakt</h4>
+      <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
+      <p>Telefon: +46 70 123 45 67</p>
+    </div>
+    <div class="footer-botten">
+      <p>© 2025 Nexora. Alla rättigheter förbehållna.</p>
+    </div>
+  </div>
 </footer>
 
 <!-- Axios CDN -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<!-- Din appkod -->
-<script src=".simelli.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Appkod -->
 <script src="./simelli.js" defer></script>
 </body>
 </html>
