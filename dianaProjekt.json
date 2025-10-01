@@ -12,7 +12,6 @@
     "kategori": "Research",
     "datum": "2025-10-15",
     "beskrivning": "Genomför kundintervjuer med frilansare för att samla insikter som kan förbättra vår app.",
-    "ikon": "fa-solid fa-users",
     "status": "planerat",
     "prioritet": "medel"
   },
@@ -21,7 +20,6 @@
     "kategori": "Analys",
     "datum": "2025-08-10",
     "beskrivning": "Sätter upp KPI:er och integrerar verktyg som Google Analytics och Mixpanel för att mäta engagemang.",
-    "ikon": "fa-solid fa-chart-pie",
     "status": "klart",
     "prioritet": "hög"
   },
@@ -30,7 +28,6 @@
     "kategori": "Investering",
     "datum": "2025-11-20",
     "beskrivning": "Bygger ett pitchdeck för TaskSense med fokus på AI, marknadspotential och investeringsmöjligheter.",
-    "ikon": "fa-solid fa-file-powerpoint",
     "status": "planerat",
     "prioritet": "låg"
   },
@@ -39,8 +36,9 @@
     "kategori": "Projektledning",
     "datum": "2025-09-18",
     "beskrivning": "Leder en intern sprint med dagliga standups, dokumentation och uppföljning av uppgifter.",
-    "ikon": "fa-solid fa-people-group",
     "status": "pågående",
     "prioritet": "medel"
   }
 ]
+
+
