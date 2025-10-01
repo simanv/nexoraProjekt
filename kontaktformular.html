@@ -1,86 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktformular</title>
-    <link rel="stylesheet" href="kontaktformular.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktformulär</title>
+  <link rel="stylesheet" href="kontaktformular.css">
 </head>
 <body>
 
 <header class="header">
   <img src="techföretag/nexoraLogga.png" alt="Nexoras logga" class="nexora-logga">
 
-<button class="navicon" aria-label="Meny">☰</button>
+  <button class="navicon" aria-label="Meny">☰</button>
 
-<nav class="huvudmeny">
-  <ul>
-    <li><a href="huvudsida.html">Hem</a>
+  <nav class="huvudmeny" aria-label="Huvudmeny">
+    <ul>
+      <li><a href="huvudsida.html">Hem</a></li>
     </ul>
   </nav>
-   </header>   
+</header>
 
-<form id="kontaktForm" novalidate>
-    <!-- Namn -->
-      <div class="fält">
-        <label for="namn">Namn</label>
-        <input id="namn" name="namn" type="text" autocomplete="name" required
-               minlength="2" spellcheck="false"
-               placeholder="Ditt namn">
-        <p class="hint" id="namnHint" aria-live="polite"></p>
+<main>
+  <form id="kontaktForm" novalidate>
+    <div class="fält">
+      <label for="namn">Namn</label>
+      <input id="namn" name="namn" type="text" autocomplete="name" required minlength="2" spellcheck="false" placeholder="Ditt namn">
+      <p class="hint" id="namnHint" aria-live="polite"></p>
+    </div>
+
+    <div class="fält">
+      <label for="telefon">Telefonnummer</label>
+      <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+46 70 123 45 67">
+      <p class="hint" id="telefonHint" aria-live="polite"></p>
+    </div>
+
+    <div class="fält">
+      <label for="epost">E-post</label>
+      <input id="epost" name="epost" type="email" autocomplete="email" required placeholder="namn@exempel.se">
+      <p class="hint" id="epostHint" aria-live="polite"></p>
+    </div>
+
+    <div class="fält">
+      <label for="meddelande">Meddelande</label>
+      <textarea id="meddelande" name="meddelande" rows="5" required minlength="10" maxlength="1000" placeholder="Skriv ditt meddelande här..."></textarea>
+      <div class="radinfo">
+        <p class="hint" id="meddelandeHint" aria-live="polite"></p>
+        <span id="räknare" aria-live="polite"></span>
       </div>
+    </div>
 
-      <!-- Telefon -->
-      <div class="fält">
-        <label for="telefon">Telefonnummer</label>
-        <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel"
-               placeholder="+46 70 123 45 67" required>
-        <p class="hint" id="telefonHint" aria-live="polite"></p>
-      </div>
+    <button id="skicka" type="submit" disabled>Skicka</button>
+    <p class="formstatus" id="formStatus" aria-live="polite"></p>
+  </form>
+</main>
 
-      <!-- E-post -->
-      <div class="fält">
-        <label for="epost">E-post</label>
-        <input id="epost" name="epost" type="email" autocomplete="email"
-               placeholder="namn@exempel.se" required>
-        <p class="hint" id="epostHint" aria-live="polite"></p>
-      </div>
-
-      <!-- Meddelande -->
-      <div class="fält">
-        <label for="meddelande">Meddelande</label>
-        <textarea id="meddelande" name="meddelande" rows="5" required
-                  minlength="10" maxlength="1000"
-                  placeholder="Skriv ditt meddelande här..."></textarea>
-        <div class="radinfo">
-          <p class="hint" id="meddelandeHint" aria-live="polite"></p>
-          <span id="räknare" aria-live="polite"></span>
-        </div>
-      </div>
-
-      <button id="skicka" type="submit" disabled>Skicka</button>
-      <p class="formstatus" id="formStatus" aria-live="polite"></p>
-    </form>
-
-  <script src="kontakt.js"></script>
-
+<script src="kontakt.js"></script>
 
 <footer>
   <div class="footer">
-    <div class="namn">
-      <h3>Nexora</h3>
+    <div class="namn"><h3>Nexora</h3></div>
+    <div class="footer-kontakt">
+      <h4>Kontakt</h4>
+      <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
+      <p>Telefon: +46 70 123 45 67</p>
     </div>
- <div class="footer-kontakt">
-  <h4>Kontakt</h4>
-  <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
-  <p>Telefon: +46 70 123 45 67</p>
-</div>
-<div class="footer-botten">
-  <p>© 2025 Nexora Alla rättigheter förbehållna.</p>
-</div>
-</div>
+    <div class="footer-botten">
+      <p>© 2025 Nexora – Alla rättigheter förbehållna.</p>
+    </div>
+  </div>
 </footer>
 
 </body>
 </html>
-    
