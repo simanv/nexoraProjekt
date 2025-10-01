@@ -65,7 +65,7 @@ window.onload = () =>
   listEl.innerHTML = 'Laddar projekt...';
 
 
-  // JSON
+  //Hämtat från json
   let all = [];
   try {
     const res = await axios.get('./simelli.json', { responseType: 'json' });

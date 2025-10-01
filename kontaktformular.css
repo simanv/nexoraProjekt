@@ -40,111 +40,59 @@ header {
 }
 
 /*Kontaktformulär*/
-:root{
-  --bg:#1b263b;     /* mörk bakgrund */
-  --kort: #0d1b2a;       /* kortbakgrund */
-  --ram: #0d1b2a; 
-  --text:#7e7e7e;
-  --svag:#94a3b8;
-  --ok:#22c55e;
-  --fel:#ef4444;
-  --fokus:#60a5fa;
+* { box-sizing: border-box; }
+form { display: grid; gap: 12px; }
+label { font-weight: bold; }
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
 }
 
-*{ box-sizing:border-box; }
-html,body { 
-  height:100%; 
+input:focus, textarea:focus {
+  border-color: #60a5fa;
+  outline: none;
 }
 
-.kontakt-wrap{
-  width:min(820px, 100%);
-  margin: clamp(24px, 5vw, 48px) auto;
-  background: linear-gradient(180deg, #0d1326, #0b1224);
-  border:1px solid var(--ram);
-  border-radius:18px;
-  padding: clamp(16px, 4vw, 28px);
-  box-shadow: 0 12px 32px rgba(0,0,0,.35);
+input.validerad-ok, textarea.validerad-ok  { border-color: #22c55e; }
+input.validerad-fel, textarea.validerad-fel{ border-color: #ef4444; }
+
+.hint {
+  min-height: 16px;
+  font-size: 13px;
+  color: #666;
+}
+.hint.ok  { color: #22c55e; }
+.hint.fel { color: #ef4444; }
+
+#räknare {
+  font-size: 12px;
+  color: #666;
 }
 
-h1{
-  margin:0 0 8px 0;
-  font-size: clamp(20px, 2.4vw + 8px, 28px);
-}
-
-form{ display:grid; gap:16px; }
-.fält{ display:grid; gap:6px; }
-label{ font-weight:600; }
-
-input, textarea{
-  width:100%;
-  border:1px solid var(--ram);
-  background:#f5f5dc;
-  color:var(--text);
-  border-radius:12px;
-  padding:12px 14px;
-  font-size:16px;
-  outline:none;
-  transition: border-color .15s, box-shadow .15s;
-}
-
-:root{
-  --ok-mix:  #2fb463;  /* approx mix av --ok och #1f2937 */
-  --fel-mix: #d75454;  /* approx mix av --fel och #1f2937 */
-  --fokus-ring: rgba(96,165,250,.30);
-}
-
-input:focus, textarea:focus{
-  border-color: var(--fokus);
-  box-shadow: 0 0 0 3px var(--fokus-ring);
-}
-input.validerad-ok, textarea.validerad-ok{ border-color: var(--ok-mix); }
-input.validerad-fel, textarea.validerad-fel{ border-color: var(--fel-mix); }
-
-
-.hint{
-  margin:2px 0 0;
-  font-size:13px;
-  color:var(--svag);
-  min-height:18px; /* behåll höjd även när tomt */
-}
-
-.hint.fel { color: var(--fel); }
-.hint.ok  { color: var(--ok); }
-
-.radinfo{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-}
-
-#räknare{ font-size:12px; color:var(--svag); }
-
-button{
-  margin-top:8px;
-  border:none;
-  border-radius:12px;
-  padding:12px 18px;
-  font-weight:700;
-  cursor:pointer;
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
   background: #4cc9f0;
-  color:white;
-  opacity:.6;           /* blir 1.0 när aktiv */
-  transition: opacity .15s, filter .15s, transform .02s;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: .6;
 }
+button:enabled { opacity: 1; }
+button:disabled { cursor: not-allowed; }
 
-button:enabled{ opacity:1; }
-button:active{ transform: translateY(1px); }
-button:disabled{ cursor:not-allowed; filter: grayscale(.2); }
-
-.formstatus{
-  margin:8px 0 0;
-  min-height:18px;
-  font-size:14px;
-  color:var(--svag);
+.formstatus {
+  min-height: 16px;
+  font-size: 13px;
+  color: #666;
 }
-.formstatus.ok{ color:var(--ok); }
-.formstatus.fel{ color:var(--fel); }
+.formstatus.ok  { color: #22c55e; }
+.formstatus.fel { color: #ef4444; }
 
 
 /* ====== Footer ====== */
