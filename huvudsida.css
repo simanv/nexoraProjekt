@@ -32,86 +32,70 @@ header {
 
 .huvudmeny a {
   text-decoration: none;
-  color: #f5f5dc; /* beige text */
+  color: #f5f5dc;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .huvudmeny a:hover {
-  color: #4cc9f0; /* ljusblå vid hover */
+  color: #4cc9f0; 
 }
 
 h1{
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 li {
-    margin-left: 50px;
-    font-size: 18px;
+  margin-left: 50px;
+  font-size: 18px;
 }
 
 /* Poträttbild-namn */
 .namn-titel a {
-    text-decoration: none;
-    color: #1b263b;
-    transition: transform 0.2s ease, font-size 0.2s ease;
-    display: inline-block;
+  text-decoration: none;
+  color: #1b263b;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+  display: inline-block;
 }
 
 .namn-titel a:hover {
-    transform: scale(1.2);
-    color: #4cc9f0;
+  transform: scale(1.2);
+  color: #4cc9f0;
 }
 
 .info {
-    text-align: center;
-    max-width: 800px;
-    margin: 40px auto;
-    line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  line-height: 1.6;
 }
-
 
 /* Porträttbild */
 .porträttsektion {
   display: flex;
-  justify-content: center;  /* centrerar hela raden */
-  gap: 40px; /*avstånd mellan personerna*/
+  justify-content: center; 
+  gap: 40px; 
   margin-top: 30px;
   flex-wrap: wrap;
 }
 
 .person {
-    text-align: center; /*gör att namn hamnar under bilden*/
-    width: 220px;
+  text-align: center; 
+  width: 220px;
 }
 
 .person img {
-    width: 200px; /*storlek på bild*/
-    height: auto;
-    border: 4px solid #1b263b;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-/* ====== Bildspel ====== */
-.bildspel {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.bildspel img {
-  width: 220px;
-  margin: 10px;
+  width: 200px; 
+  height: auto;
+  border: 4px solid #1b263b;
+  object-fit: cover;
   border-radius: 10px;
-  border: 2px solid #4cc9f0;
 }
-
 
 /* ====== Footer ====== */
 footer {
@@ -121,7 +105,6 @@ footer {
   margin-top: 40px;
   text-align: center;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .footer h3 {
