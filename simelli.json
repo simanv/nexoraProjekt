@@ -1,63 +1,47 @@
 [
   {
-    "id": "P-101",
     "titel": "Kundportal – onboardingflöde",
-    "roll": "System Designer",
     "ansvarig": "Simelli Ani",
     "beskrivning": "Design av flöden och systemkontrakt för ny kundonboarding.",
     "startDatum": "2024-09-10",
     "slutDatum": "2025-01-15",
     "status": "Avslutad",
-    "prioritet": "Hög",
-    "taggar": ["onboarding", "auth", "ui"]
-
+    "prioritet": "Hög"
   },
   {
-    "id": "P-102",
     "titel": "Rapportmotor v2",
-    "roll": "System Designer",
     "ansvarig": "Simelli Ani",
     "beskrivning": "Speca modulär rapportmotor med JSON-templating.",
     "startDatum": "2025-09-05",
     "slutDatum": "2025-10-30",
     "status": "Planerad",
-    "prioritet": "Låg",
-    "taggar": ["reports", "templates"]
+    "prioritet": "Låg"
   },
   {
-    "id": "P-103",
     "titel": "Notistjänst (event bus)",
-    "roll": "System Designer",
     "ansvarig": "Simelli Ani",
     "beskrivning": "Designa eventbus, kontrakt och återförsökspolicy.",
     "startDatum": "2025-09-20",
     "slutDatum": "2025-11-01",
     "status": "Pågår",
-    "prioritet": "Hög",
-    "taggar": ["events", "retry", "queue"]
+    "prioritet": "Hög"
   },
   {
-    "id": "P-104",
     "titel": "Admin-UI åt support",
-    "roll": "System Designer",
     "ansvarig": "Simelli Ani",
     "beskrivning": "Informationsarkitektur och systemgränser för adminverktyg.",
     "startDatum": "2025-09-12",
     "slutDatum": "2025-10-25",
     "status": "Pågår",
-    "prioritet": "Låg",
-    "taggar": ["admin", "ia", "rbac"]
+    "prioritet": "Låg"
   },
   {
-    "id": "P-105",
     "titel": "Datakatalog och API-spec",
-    "roll": "System Designer",
     "ansvarig": "Simelli Ani",
     "beskrivning": "Definiera datamodeller och OpenAPI-specifikationer.",
     "startDatum": "2023-09-08",
     "slutDatum": "2024-10-05",
     "status": "Avslutad",
-    "prioritet": "Hög",
-    "taggar": ["openapi", "schema", "catalog"]
+    "prioritet": "Hög"
   }
 ]

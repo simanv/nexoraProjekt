@@ -56,7 +56,7 @@ window.onload = () =>
  // Projekt 
 (async () => {
   const NAME = 'Simelli Ani'; 
-  const prioRank = { 'Låg': 1, 'Hög': 3 };
+  const prioRank = { 'Låg': 1, 'Hög': 2 };
 
   const listEl = document.getElementById('mina-projekt');
   const statusEl = document.getElementById('filter-status');
@@ -95,7 +95,7 @@ window.onload = () =>
     let out = [...all];
 
     // Filtrera status
-    const s = statusEl.value; // "Alla" | "Pågår" | "Avslutad" | "Planerad"
+    const s = statusEl.value; 
     if (s !== 'Alla') out = out.filter(p => p.status === s);
 
     // Sortera (låg -> hög prioritet)
