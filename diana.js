@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+ 
+//Bildspel
+
   const bilder = document.querySelectorAll('.bildspel .bild');
   const prevBtn = document.querySelector('.prev');
   const nextBtn = document.querySelector('.next');
@@ -6,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function visaBild(index) {
     bilder.forEach(bild => bild.classList.remove('aktiv'));
-    if (bilder[index]) bilder[index].classList.add('aktiv');
+    bilder[index].classList.add('aktiv');
   }
 
   if (prevBtn) prevBtn.addEventListener('click', () => {
@@ -14,24 +17,27 @@ document.addEventListener("DOMContentLoaded", () => {
     visaBild(aktuellIndex);
   });
 
-  if (nextBtn) nextBtn.addEventListener('click', () => {
+  nextBtn?.addEventListener('click', () => {
     aktuellIndex = (aktuellIndex + 1) % bilder.length;
     visaBild(aktuellIndex);
   });
 
   visaBild(aktuellIndex);
 
+//Skill-bar
+
   const skills = document.querySelectorAll('.skill');
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const skill = entry.target;
         const percent = skill.getAttribute('data-percent');
         const fill = skill.querySelector('.fill');
-        if (fill && percent) {
-          fill.style.width = percent + '%';
-          fill.textContent = percent + '%';
-        }
+
+        fill.style.width = percent + '%';
+        fill.textContent = percent + '%';  
+
         observer.unobserve(skill);
       }
     });
@@ -41,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 let allaProjekt = [];
+
+//Inläsning av projekt
 
 fetch('dianaProjekt.json')
   .then(response => {
@@ -54,11 +62,21 @@ fetch('dianaProjekt.json')
   })
   .catch(error => console.error('Fel vid inläsning av projekt:', error));
 
-function fyllFilterAlternativ(data) {
-  const statusSelect = document.getElementById('statusFilter');
-  const sortering = document.getElementById('sortering');
 
+function fyllFilterAlternativ(data) {
+  const kategoriSelect = document.getElementById('kategoriFilter');
+  const statusSelect = document.getElementById('statusFilter');
+
+  const kategorier = [...new Set(data.map(p => p.kategori))];
   const statusar = [...new Set(data.map(p => p.status))];
+
+  kategorier.forEach(kat => {
+    const opt = document.createElement('option');
+    opt.value = kat;
+    opt.textContent = kat;
+    kategoriSelect.appendChild(opt);
+  });
+
   statusar.forEach(stat => {
     const opt = document.createElement('option');
     opt.value = stat;
@@ -66,22 +84,28 @@ function fyllFilterAlternativ(data) {
     statusSelect.appendChild(opt);
   });
 
+  kategoriSelect.addEventListener('change', uppdateraProjekt);
   statusSelect.addEventListener('change', uppdateraProjekt);
-  if (sortering) sortering.addEventListener('change', uppdateraProjekt);
+  document.getElementById('sortering').addEventListener('change', uppdateraProjekt);
 }
 
+// Bygger filtermenyer från data och kopplar ändringshändelser (inkl. sortering) som uppdaterar projektlistan.`
+
 function uppdateraProjekt() {
+  const kategoriVal = document.getElementById('kategoriFilter').value;
   const statusVal = document.getElementById('statusFilter').value;
   const sortVal = document.getElementById('sortering').value;
 
   let filtrerade = allaProjekt.filter(projekt => {
+    const kategoriMatch = kategoriVal === 'alla' || projekt.kategori === kategoriVal;
     const statusMatch = statusVal === 'alla' || projekt.status === statusVal;
-    return statusMatch;
+    return kategoriMatch && statusMatch;
   });
 
   filtrerade.sort((a, b) => {
     if (sortVal === 'datum-nyast') return new Date(b.datum) - new Date(a.datum);
     if (sortVal === 'datum-aldst') return new Date(a.datum) - new Date(b.datum);
+
     const prioritetOrdning = { hög: 3, medel: 2, låg: 1 };
     if (sortVal === 'prioritet-hog') return prioritetOrdning[b.prioritet] - prioritetOrdning[a.prioritet];
     if (sortVal === 'prioritet-lag') return prioritetOrdning[a.prioritet] - prioritetOrdning[b.prioritet];
@@ -90,6 +114,8 @@ function uppdateraProjekt() {
 
   visaProjekt(filtrerade);
 }
+
+//ritar om projektlistan i DOM med just de projekt som återstår efter filter/sortering.
 
 function visaProjekt(projektLista) {
   const container = document.getElementById('projekt-lista');
@@ -121,9 +147,12 @@ function visaProjekt(projektLista) {
   });
 }
 
+// Öppnar/stänger mobilmenyn när hamburgaren klickas (togglar klassen "visa").
+
 document.addEventListener("DOMContentLoaded", () => {
   const navicon = document.querySelector('.navicon');
   const meny = document.querySelector('.huvudmeny ul');
+
   if (navicon && meny) {
     navicon.addEventListener('click', () => {
       meny.classList.toggle('visa');
