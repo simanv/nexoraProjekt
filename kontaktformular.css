@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b263b; /* mörkblå */
+
   padding: 5px 40px;
 }
 
@@ -41,8 +41,14 @@ header {
 
 /*Kontaktformulär*/
 * { box-sizing: border-box; }
-form { display: grid; gap: 12px; }
-label { font-weight: bold; }
+form { 
+  display: grid; 
+  gap: 12px; 
+}
+
+label { 
+  font-weight: bold; 
+}
 
 input, textarea {
   width: 100%;
@@ -63,8 +69,8 @@ input.validerad-fel, textarea.validerad-fel{ border-color: #ef4444; }
 .hint {
   min-height: 16px;
   font-size: 13px;
-  color: #666;
 }
+
 .hint.ok  { color: #22c55e; }
 .hint.fel { color: #ef4444; }
 
