@@ -53,6 +53,7 @@ window.onload = () =>
   });
   
 
+ // Projekt 
 (async () => {
   const NAME = 'Simelli Ani'; 
   const prioRank = { 'Låg': 1, 'Hög': 3 };
@@ -63,6 +64,8 @@ window.onload = () =>
 
   listEl.innerHTML = 'Laddar projekt...';
 
+
+  // JSON
   let all = [];
   try {
     const res = await axios.get('./simelli.json', { responseType: 'json' });
@@ -72,7 +75,6 @@ window.onload = () =>
     listEl.innerHTML = '<p style="color:red">Kunde inte läsa in projekten.</p>';
     return;
   }
-
 
   function render(items) {
     if (!items.length) { listEl.innerHTML = '<p>Inga projekt.</p>'; return; }
@@ -104,10 +106,7 @@ window.onload = () =>
     render(out);
   }
 
-  // init
   apply();
-
-  // lyssna på ändringar
   statusEl.addEventListener('change', apply);
   sortEl.addEventListener('change', apply);
 })();
