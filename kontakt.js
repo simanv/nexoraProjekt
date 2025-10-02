@@ -1,6 +1,5 @@
 // Hjälpfunktioner för validering
 const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-// Svenska telefonnummer: 0… eller +46/0046, mellanslag/streck ok
 const reTelefon = /^(?:\+46|0046|0)\s*(?:\d[\s-]?){7,12}\d$/;
 
 function klass(el, ok){
@@ -83,7 +82,7 @@ meddelande.addEventListener('input', () => {
 uppdateraRäknare();
 uppdateraSkicka();
 
-// Avbryt faktisk submit (demo). Byt till din egen hantering/AJAX.
+// Submit - hanterarer
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   statusEl.textContent = 'Skickat! (här anropar du din backend eller e-posttjänst)';
