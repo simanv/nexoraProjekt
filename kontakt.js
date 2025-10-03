@@ -1,21 +1,19 @@
-// Hjälpfunktioner för validering
-const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-// Svenska telefonnummer: 0… eller +46/0046, mellanslag/streck ok
+const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i; 
+
 const reTelefon = /^(?:\+46|0046|0)\s*(?:\d[\s-]?){7,12}\d$/;
 
-function klass(el, ok){
-  el.classList.remove('validerad-ok','validerad-fel');
-  el.classList.add(ok ? 'validerad-ok' : 'validerad-fel');
+function klass(el, ok){ 
+  el.classList.remove('validerad-ok','validerad-fel'); 
+  el.classList.add(ok ? 'validerad-ok' : 'validerad-fel'); 
 }
 
 function setHint(el, msg, typ){
-  el.textContent = msg || '';
-  el.classList.remove('ok','fel');
-  if(!msg) return;
-  el.classList.add(typ);
+  el.textContent = msg || '';  
+  el.classList.remove('ok','fel'); 
+  if(!msg) return;  
+  el.classList.add(typ); 
 }
 
-// Fält
 const form = document.getElementById('kontaktForm');
 const namn = document.getElementById('namn');
 const telefon = document.getElementById('telefon');
@@ -25,11 +23,11 @@ const skicka = document.getElementById('skicka');
 const statusEl = document.getElementById('formStatus');
 const räknare = document.getElementById('räknare');
 
-// Validerare (returnerar {ok, msg})
+
 const check = {
-  namn: (v) => {
+  namn: (v) => { 
     const ok = /^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,}$/.test(v.trim());
-    return { ok, msg: ok ? '✔ Ser bra ut.' : 'Minst 2 tecken. Endast bokstäver, mellanslag, - och \'.' };
+    return { ok, msg: ok ? '✔ Ser bra ut.' : 'Minst 2 tecken. Endast bokstäver, mellanslag, - och \'.' }; 
   },
   telefon: (v) => {
     const ok = reTelefon.test(v.replace(/\s/g,''));
@@ -42,66 +40,65 @@ const check = {
   meddelande: (v) => {
     const len = v.trim().length;
     const ok = len >= 10 && len <= 1000;
-    return { ok, msg: ok ? '✔ Tack!' : 'Minst 10 tecken (max 1000).' };
+    return { ok, msg: ok ? '✔ Tack!' : 'Minst 10 tecken (max 1000).' }; 
   }
 };
 
-// Live-uppdatering
-function uppdateraRäknare(){
-  const len = meddelande.value.trim().length;
-  räknare.textContent = `${len}/1000`;
+function uppdateraRäknare(){ 
+  const len = meddelande.value.trim().length; 
+  räknare.textContent = `${len}/1000`; 
 }
 
-function valideraFält(el, typ, hintEl){
-  const { ok, msg } = check[typ](el.value);
-  klass(el, ok);
-  setHint(hintEl, msg, ok ? 'ok' : 'fel');
-  uppdateraSkicka();
+function valideraFält(el, typ, hintEl){ 
+  const { ok, msg } = check[typ](el.value); 
+  klass(el, ok); //färg
+  setHint(hintEl, msg, ok ? 'ok' : 'fel'); 
+  uppdateraSkicka(); 
 }
 
-function uppdateraSkicka(){
-  const v1 = check.namn(namn.value).ok;
+function uppdateraSkicka(){ 
+  const v1 = check.namn(namn.value).ok; 
   const v2 = check.telefon(telefon.value).ok;
   const v3 = check.epost(epost.value).ok;
   const v4 = check.meddelande(meddelande.value).ok;
-  const ok = v1 && v2 && v3 && v4;
-  skicka.disabled = !ok;
-  statusEl.textContent = ok ? 'Allt ser bra ut – du kan skicka.' : '';
-  statusEl.className = ok ? 'formstatus ok' : 'formstatus';
+  const ok = v1 && v2 && v3 && v4; 
+  skicka.disabled = !ok; 
+  statusEl.textContent = ok ? 'Allt ser bra ut - du kan skicka.' : ''; 
+  statusEl.className = ok ? 'formstatus ok' : 'formstatus'; 
 }
 
-// Koppla händelser
-namn.addEventListener('input', () => valideraFält(namn, 'namn', document.getElementById('namnHint')));
+
+namn.addEventListener('input', () => valideraFält(namn, 'namn', document.getElementById('namnHint'))); 
 telefon.addEventListener('input', () => valideraFält(telefon, 'telefon', document.getElementById('telefonHint')));
 epost.addEventListener('input', () => valideraFält(epost, 'epost', document.getElementById('epostHint')));
 meddelande.addEventListener('input', () => {
   uppdateraRäknare();
-  valideraFält(meddelande, 'meddelande', document.getElementById('meddelandeHint'));
+  valideraFält(meddelande, 'meddelande', document.getElementById('meddelandeHint')); 
 });
 
-// Init
-uppdateraRäknare();
-uppdateraSkicka();
 
-// Avbryt faktisk submit (demo). Byt till din egen hantering/AJAX.
+uppdateraRäknare(); 
+uppdateraSkicka(); 
+
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   statusEl.textContent = 'Skickat! (här anropar du din backend eller e-posttjänst)';
   statusEl.className = 'formstatus ok';
   form.reset();
   [namn,telefon,epost,meddelande].forEach(el => el.classList.remove('validerad-ok','validerad-fel'));
-  uppdateraRäknare();
-  uppdateraSkicka();
+  uppdateraRäknare(); 
+  uppdateraSkicka(); 
 });
 
-// Meny
-document.addEventListener("DOMContentLoaded", () => {
-  const navicon = document.querySelector('.navicon');
-  const meny = document.querySelector('.huvudmeny ul');
 
-  if (navicon && meny) {
-    navicon.addEventListener('click', () => {
-      meny.classList.toggle('visa');
+document.addEventListener("DOMContentLoaded", () => { 
+  const navicon = document.querySelector('.navicon'); 
+  const meny = document.querySelector('.huvudmeny ul'); 
+
+  if (navicon && meny) { 
+    navicon.addEventListener('click', () => { 
+      meny.classList.toggle('visa'); 
     });
   }
 });

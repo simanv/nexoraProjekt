@@ -1,18 +1,16 @@
-/* ====== Grundstil ====== */
 body {
   margin: 0;
   font-family: "Oswald", sans-serif;
-  background-color: #f5f5dc; /* beige bakgrund */
-  color: #0d1b2a; /* mörk text */
+  background-color: #f5f5dc; 
+  color: #0d1b2a; 
   line-height: 1.6;
 }
 
-/* ====== Header & Meny ====== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b263b; /* mörkblå */
+  background-color: #1b263b; 
   padding: 5px 40px;
 }
 
@@ -55,7 +53,7 @@ li {
   font-size: 18px;
 }
 
-/* Poträttbild-namn */
+
 .namn-titel a {
   text-decoration: none;
   color: #1b263b;
@@ -75,13 +73,13 @@ li {
   line-height: 1.6;
 }
 
-/* Porträttbild */
+
 .porträttsektion {
   display: flex;
   justify-content: center; 
   gap: 40px; 
   margin-top: 30px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .person {
@@ -97,7 +95,7 @@ li {
   border-radius: 10px;
 }
 
-/* ====== Footer ====== */
+
 footer {
   background: #1b263b;
   color: #f5f5dc;

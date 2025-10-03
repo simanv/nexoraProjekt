@@ -1,16 +1,13 @@
 body{
   margin:0;
   background: #1b263b;
-  color:var(--text);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* ====== Header & Meny ====== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 5px 40px;
 }
 
@@ -30,16 +27,16 @@ header {
 
 .huvudmeny a {
   text-decoration: none;
-  color: #f5f5dc; /* beige text */
+  color: #f5f5dc; 
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .huvudmeny a:hover {
-  color: #4cc9f0; /* ljusblå vid hover */
+  color: #4cc9f0; 
 }
 
-/*Kontaktformulär*/
+
 * { box-sizing: border-box; }
 form { 
   display: grid; 
@@ -101,7 +98,6 @@ button:disabled { cursor: not-allowed; }
 .formstatus.fel { color: #ef4444; }
 
 
-/* ====== Footer ====== */
 footer {
   background: #1b263b;
   color: #f5f5dc;
@@ -122,10 +118,6 @@ footer {
 
 .footer a:hover {
   color: #4cc9f0;
-  text-decoration: underline;
-}
-
-.footer a:hover {
   text-decoration: underline;
 }
 

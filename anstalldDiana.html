@@ -29,7 +29,6 @@
 
   <div class="porträttsektion">
     <div class="porträttbild">
-      
       <img src="Bilder/DianaBild.JPEG" alt="Porträttbild på Diana Samuel">
     </div>
 
@@ -61,7 +60,7 @@
     <button class="prev" aria-label="Föregående bild">&#10094;</button>
     <div class="bildspel">
      
-      <img src="techföretag/bildspel1.png" alt="Bild 1" class="bild">
+      <img src="techföretag/bildspel1.png" alt="Bild 1" class="bild aktiv">
       <img src="techföretag/bildspel2.jpeg" alt="Bild 2" class="bild">
       <img src="techföretag/bildspel3.jpeg" alt="Bild 3" class="bild">
       <img src="techföretag/bildspel4.jpeg" alt="Bild 4" class="bild">
@@ -73,31 +72,33 @@
   <h2>Mina kompetenser</h2>
 
   <div class="skill" data-percent="95">
-    <h3>Projektledning</h3>
+    <h4>Projektledning</h4>
     <div class="bar"><div class="fill"></div></div>
   </div>
 
   <div class="skill" data-percent="90">
-    <h3>Strategiskt tänkande</h3>
+    <h4>Strategiskt tänkande</h4>
     <div class="bar"><div class="fill"></div></div>
   </div>
 
   <div class="skill" data-percent="90">
-    <h3>Kommunikation</h3>
+    <h4>Kommunikation</h4>
     <div class="bar"><div class="fill"></div></div>
   </div>
 
   <div class="skill" data-percent="80">
-    <h3>Analys</h3>
+    <h4>Analys</h4>
     <div class="bar"><div class="fill"></div></div>
   </div>
 
   <div class="skill" data-percent="85">
-    <h3>Produktutveckling</h3>
+    <h4>Produktutveckling</h4>
     <div class="bar"><div class="fill"></div></div>
   </div>
 
   <h2>Mina projekt</h2>
+
+  <div class="projekt-filter">
 
     <label for="statusFilter">Status:</label>
     <select id="statusFilter">
@@ -106,10 +107,10 @@
 
     <label for="sortering">Sortera:</label>
     <select id="sortering">
-      <option value="datum-nyast">Datum – Nyast först</option>
-      <option value="datum-aldst">Datum – Äldst först</option>
-      <option value="prioritet-hog">Prioritet – Hög först</option>
-      <option value="prioritet-lag">Prioritet – Låg först</option>
+      <option value="datum-nyast">Datum - Nyast först</option>
+      <option value="datum-aldst">Datum - Äldst först</option>
+      <option value="prioritet-hog">Prioritet - Hög först</option>
+      <option value="prioritet-lag">Prioritet - Låg först</option>
     </select>
   </div>
 
@@ -124,11 +125,14 @@
         <p>Telefon: +46 70 123 45 67</p>
       </div>
       <div class="footer-botten">
-        <p>© 2025 Nexora – Alla rättigheter förbehållna.</p>
+        <p>© 2025 Nexora - Alla rättigheter förbehållna.</p>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="diana.js"></script>
+
 </body>
 </html>
+
