@@ -1,5 +1,4 @@
-const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i; 
-
+const reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 const reTelefon = /^(?:\+46|0046|0)\s*(?:\d[\s-]?){7,12}\d$/;
 
 function klass(el, ok){ 
@@ -76,10 +75,8 @@ meddelande.addEventListener('input', () => {
   valideraFält(meddelande, 'meddelande', document.getElementById('meddelandeHint')); 
 });
 
-
 uppdateraRäknare(); 
 uppdateraSkicka(); 
-
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
