@@ -1,4 +1,3 @@
-// ===== Bildspel =====
 const bilder = [
   './Bilder/AmandaBild1.png',
   './Bilder/AmandaBild2.png',
@@ -26,11 +25,8 @@ nextBtn.addEventListener('click', () => {
   visaBild();
 });
 
-// Startbild
 visaBild();
 
-
-// Progress-bar animation
 window.onload = () => 
   document.querySelectorAll('.fill').forEach(bar => {
     if (bar.classList.contains('UX&UIDesign')) {
@@ -82,15 +78,12 @@ window.onload = () =>
   `).join('');
 }
 
-
   function apply() {
     let out = [...all];
 
-    // Filtrera status
-    const s = statusEl.value; // "Alla" | "Pågår" | "Avslutad" | "Planerad"
+    const s = statusEl.value; 
     if (s !== 'Alla') out = out.filter(p => p.status === s);
 
-    // Sortera (låg -> hög prioritet)
     if (sortEl.value === 'prio-asc') {
       out.sort((a, b) => (prioRank[a.prioritet] ?? 999) - (prioRank[b.prioritet] ?? 999));
     }
@@ -98,10 +91,8 @@ window.onload = () =>
     render(out);
   }
 
-  // init
   apply();
 
-  // lyssna på ändringar
   statusEl.addEventListener('change', apply);
   sortEl.addEventListener('change', apply);
 })();

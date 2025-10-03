@@ -1,12 +1,11 @@
 body{
   margin:0;
   font-family: "Oswald", sans-serif;
-  background:#f5f5dc; /* backgrund*/
+  background:#f5f5dc; 
   color:#0d1b2a;
   line-height: 1.6;
 }
 
-/* ====== Header & Meny ====== */
 header {
   display: flex;
   justify-content: space-between;
@@ -31,34 +30,29 @@ header {
 
 .huvudmeny a {
   text-decoration: none;
-  color: #f5f5dc; /* beige text */
+  color: #f5f5dc; 
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .huvudmeny a:hover {
-  color: #4cc9f0; /* ljusblå vid hover */
+  color: #4cc9f0; 
 }
 
-/* profil (originalet du bad om) */
 .profil {
   display: flex;
   justify-content: center;
-  /*align-items: flex-start;  /* viktigt: ingen vertikal stretch */
   gap: 30px;
 }
 
 .profil img {
-  /*display: block;*/
-  width: 400px;            /* ändra storlek här vid behov */
-  /*height: auto !important; /* tvingar rätt proportion */
-  /*flex: 0 0 auto;          förhindrar flex-stretch */
+  width: 400px;            
   border-radius: 10px;
   box-shadow: 0 4px 8px black;
 }
 
 .profil .info {
-  max-width: 600px;           /* gör så texten inte blir för bred */
+  max-width: 600px;       
 }
 
 .sned {
@@ -79,7 +73,6 @@ header {
   transform: translateX(0);
 }
 
-/* Sociala medier under bilden */
 .sociala-medier {
   margin-top: 15px;
   text-align: center;
@@ -96,7 +89,7 @@ header {
 .ikoner {
   display: flex;
   justify-content: center;
-  gap: 15px; /* mellanrum mellan ikonerna */
+  gap: 15px; 
 }
 
 .ikoner a {
@@ -110,7 +103,6 @@ header {
   transition: transform 0.3s, filter 0.3s;
 }
 
-/*kompetensstaplar*/
 h2 {
   color: rgb(17,21,74);
   font-family: "Oswald", sans-serif;
@@ -140,13 +132,13 @@ h4 {
 
 .fill {
   height: 100%;
-  width: 0; /* startar tom */
+  width: 0; 
   line-height: 25px;
   color: rgb(0, 0, 0);
   text-align: right;
   padding-right: 10px;
   border-radius: 20px;
-  transition: width 2s; /* animation */
+  transition: width 2s; 
   box-shadow: 0 7px 10px rgba(0,0,0,1);
 }
 
@@ -164,9 +156,8 @@ h4 {
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
-/* ===== Projektsektion ===== */
 .projects{
-  background: rgb(17,21,74);        /* din mörkblå*/
+  background: rgb(17,21,74);       
   margin-top: 40px;
   padding: 24px 0 36px;
   border-radius: 20px;
@@ -177,7 +168,7 @@ h4 {
   padding: 0 16px;
 }
 .projects-title{
-  color: rgb(234,201,155);          /* beige rubrik*/
+  color: rgb(234,201,155);     
   font-family: "Oswald", sans-serif;
   font-size: clamp(28px, 4vw, 40px);
   margin: 6px 0 20px;
@@ -193,8 +184,8 @@ h4 {
 }
 
 .project-card{
-  background: #3f5f96;              /* blå ton för kortet */
-  color: rgb(243,240,235);           /* ljus text */
+  background: #3f5f96;              
+  color: rgb(243,240,235);           
   border-radius: 16px;
   padding: 18px 18px 16px;
   box-shadow: inset 0 6px 18px rgba(0,0,0,.12);
@@ -223,17 +214,15 @@ h4 {
   font-size: 16px;
 }
 .project-card strong{
-  color: rgb(234,201,155);          /* beige etiketter: Status, Prioritet… */
+  color: rgb(234,201,155);          
   font-weight: 700;
 }
 
-/* finjustera mobil */
 @media (max-width: 700px){
   .projects{ border-radius: 12px; padding: 18px 0 28px; }
   .project-card{ padding: 16px; }
 }
 
-/* ====== Footer ====== */
 footer {
   background: #0d1b2a;
   color: #f5f5dc;

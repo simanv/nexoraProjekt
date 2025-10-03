@@ -1,4 +1,3 @@
-// Sne rubrik - animation
 document.addEventListener("DOMContentLoaded", () => {
   const rubrik = document.querySelector(".sned");
   setTimeout(() => {
@@ -6,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 300);
 });
 
-// ===== Bildspel =====
 const bilder = [
   './Bilder/SimelliP1.png',
   './Bilder/SimelliP2.jpg',
@@ -34,11 +32,8 @@ nextBtn.addEventListener('click', () => {
   visaBild();
 });
 
-// Startbild
 visaBild();
 
-
-// Kompetenser - animation
 window.onload = () => 
   document.querySelectorAll('.fill').forEach(bar => {
     if (bar.classList.contains('html')) {
@@ -52,11 +47,9 @@ window.onload = () =>
     }
   });
   
-
- // Projekt 
 (async () => {
   const NAME = 'Simelli Ani'; 
-  const prioRank = { 'Låg': 1, 'Hög': 3 };
+  const prioRank = { 'Låg': 1, 'Hög': 2 };
 
   const listEl = document.getElementById('mina-projekt');
   const statusEl = document.getElementById('filter-status');
@@ -64,8 +57,6 @@ window.onload = () =>
 
   listEl.innerHTML = 'Laddar projekt...';
 
-
-  //Hämtat från json
   let all = [];
   try {
     const res = await axios.get('./simelli.json', { responseType: 'json' });
@@ -94,11 +85,9 @@ window.onload = () =>
   function apply() {
     let out = [...all];
 
-    // Filtrera status
-    const s = statusEl.value; // "Alla" | "Pågår" | "Avslutad" | "Planerad"
+    const s = statusEl.value; 
     if (s !== 'Alla') out = out.filter(p => p.status === s);
 
-    // Sortera (låg -> hög prioritet)
     if (sortEl.value === 'prio-asc') {
       out.sort((a, b) => (prioRank[a.prioritet] ?? 999) - (prioRank[b.prioritet] ?? 999));
     }
@@ -111,8 +100,6 @@ window.onload = () =>
   sortEl.addEventListener('change', apply);
 })();
 
-
-// Meny - icon
 document.addEventListener("DOMContentLoaded", () => {
   const navicon = document.querySelector('.navicon');
   const meny = document.querySelector('.huvudmeny ul');
